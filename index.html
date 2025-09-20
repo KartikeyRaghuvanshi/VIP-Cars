@@ -30,29 +30,25 @@
   <p>Our virtual agent is available to assist you.</p>
 
   <!-- Salesforce Embedded Messaging Script -->
-  <script type="text/javascript">
-    function initEmbeddedMessaging() {
-      try {
-        embeddedservice_bootstrap.settings.language = 'en_US'; // adjust if needed
+ <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-        embeddedservice_bootstrap.init(
-          '00DIj000000HJrn', // your Salesforce org ID
-          'VIP_cars_Channel', // your channel name
-          'https://trailsignup-12200011f3f49e.my.site.com/ESWVIPcarsChannel1758216677852', // Experience site URL
-          {
-            scrt2URL: 'https://trailsignup-12200011f3f49e.my.salesforce-scrt.com'
-          }
-        );
-      } catch (err) {
-        console.error('Error loading Embedded Messaging: ', err);
-      }
-    }
-  </script>
+			embeddedservice_bootstrap.init(
+				'00DIj000000HJrn',
+				'New_VIP_Cars',
+				'https://trailsignup-12200011f3f49e.my.site.com/ESWNewVIPCars1758348191317',
+				{
+					scrt2URL: 'https://trailsignup-12200011f3f49e.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://trailsignup-12200011f3f49e.my.site.com/ESWNewVIPCars1758348191317/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-  <script 
-    type="text/javascript" 
-    src="https://trailsignup-12200011f3f49e.my.site.com/ESWVIPcarsChannel1758216677852/assets/js/bootstrap.min.js" 
-    onload="initEmbeddedMessaging()">
-  </script>
 </body>
 </html>
