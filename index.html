@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIP Cars Agent</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to VIP Cars</h1>
+  <p>Our virtual agent is available to assist you.</p>
+
+  <!-- Salesforce Embedded Messaging Script -->
+  <script type="text/javascript">
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'en_US'; // adjust if needed
+
+        embeddedservice_bootstrap.init(
+          '00DIj000000HJrn', // your Salesforce org ID
+          'VIP_cars_Channel', // your channel name
+          'https://trailsignup-12200011f3f49e.my.site.com/ESWVIPcarsChannel1758216677852', // Experience site URL
+          {
+            scrt2URL: 'https://trailsignup-12200011f3f49e.my.salesforce-scrt.com'
+          }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    }
+  </script>
+
+  <script 
+    type="text/javascript" 
+    src="https://trailsignup-12200011f3f49e.my.site.com/ESWVIPcarsChannel1758216677852/assets/js/bootstrap.min.js" 
+    onload="initEmbeddedMessaging()">
+  </script>
+</body>
+</html>
